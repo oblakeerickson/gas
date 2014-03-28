@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140327141440) do
+ActiveRecord::Schema.define(version: 20140328141631) do
 
   create_table "cars", force: true do |t|
     t.decimal  "mpg"
     t.string   "gas_type"
     t.decimal  "gas_tank_size"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", force: true do |t|
+    t.string   "pay_schedule"
+    t.date     "initial_pay_day"
+    t.decimal  "commute_length"
+    t.string   "state"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
